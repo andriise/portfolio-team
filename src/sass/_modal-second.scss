@@ -1,38 +1,38 @@
 /* Стили для подложки */
 .overlay {
-   /* Скрываем подложку  */
-   opacity: 0;
-   visibility: hidden;
-   
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, .2);
-   z-index: 20;
-   transition: .3s all;
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  transition: 0.3s all;
 }
 
 /* Стили для модальных окон */
 
 .modal {
-   /* Скрываем окна  */
-   opacity: 0;
-   visibility: hidden;
-   
-   /*  Установаем ширину окна  */
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
   //  width: 100%;
-   
-   /*  Центрируем и задаем z-index */
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 1000; /* Должен быть выше чем у подложки*/
-   overflow-y: scroll;
-   /*  Побочные стили   */
-  //  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Должен быть выше чем у подложки*/
+  overflow-y: scroll;
+  /*  Побочные стили   */
+  //  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
   //  text-align: center;
   //  padding: 30px;
   //  border-radius: 3px;
@@ -41,40 +41,30 @@
 }
 
 textarea {
-    resize: none;
-    overflow: auto;
+  resize: none;
+  overflow: auto;
 }
-
 
 /* Стили для активных классов подложки и окна */
 
 .modal.active,
-.overlay.active{
-   opacity: 1;
-   visibility: visible;
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
 }
 
 /* Cтили для модалок */
 // < -- Buy now - #1 -------------------------------->
 
 .backdrop__buy-now {
-  /* Скрываем окна  */
-  // opacity: 0;
-  // visibility: hidden;
-
-  /*  Центрируем и задаем z-index */
-  // position: fixed;
-  // z-index: 25; /* Должен быть выше чем у подложки*/
-  // top: 0;
-  // left: 0;
-
   /*  Побочные стили   */
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   // overflow-y: scroll;
 }
@@ -86,9 +76,9 @@ textarea {
   transform: translateX(-50%) translateY(7%) scale(1);
 
   @media screen and (min-width: 768px) {
-      top: 50%;
-      // transform: translateX(-50%) translateY(-50%) scale(1);
-    }
+    top: 50%;
+    // transform: translateX(-50%) translateY(-50%) scale(1);
+  }
 
   border: 2px solid var(--accent-color);
   border-radius: 10px;
@@ -196,7 +186,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .buy-now {
     width: 568px;
-    padding: 32px 54px;    
+    padding: 32px 54px;
     &__header {
       font-weight: 400;
       font-size: 20px;
@@ -218,7 +208,7 @@ textarea {
       &::placeholder {
         font-weight: 400;
         font-size: 14px;
-        line-height: 20px;   
+        line-height: 20px;
       }
     }
     &__comment {
@@ -227,7 +217,7 @@ textarea {
       margin-bottom: 32px;
       font-weight: 400;
       font-size: 14px;
-      line-height: 20px;   
+      line-height: 20px;
     }
     &__close-btn {
       top: 20px;
@@ -236,7 +226,6 @@ textarea {
       // width: 20px;
       padding: 4px;
       border-radius: 50%;
-
     }
     &__close-icon {
       width: 16px;
@@ -393,165 +382,155 @@ textarea {
   }
 }
 
-
-
-
 // < -- How it's made - #2 ----------------------------->
 
-
-
 .backdrop__read-more {
-    /*  Центрируем и задаем z-index */
-    // position: fixed;
-    // z-index: 25; /* Должен быть выше чем у подложки*/
-    // top: 0;
-    // left: 0;  
-    /*  Побочные стили   */
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
- 
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*  Центрируем и задаем z-index */
+  // position: fixed;
+  // z-index: 25; /* Должен быть выше чем у подложки*/
+  // top: 0;
+  // left: 0;
+  /*  Побочные стили   */
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .read-more-modal {
-    position: relative;
-    border: 2px solid var(--accent-color); 
-    top: 50%;
-    left: 50%;  
-    /*  Побочные стили   */
-    // height: 100%;
-    width: 100%;
-    transform: translate(-50%, -50%) scale(1);
-    background-color: var(--secondary-text-color);
-    border-radius: 10px;
-    // margin: 0 auto;
-    padding: 28px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 1px rgba(0,0,0,.14),0 2px 1px rgba(0,0,0,.2);
-
+  position: relative;
+  border: 2px solid var(--accent-color);
+  top: 50%;
+  left: 50%;
+  /*  Побочные стили   */
+  // height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--secondary-text-color);
+  border-radius: 10px;
+  // margin: 0 auto;
+  padding: 28px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .read-more-button {
-    /*  Центрируем и задаем z-index */
-    position: fixed;
+  /*  Центрируем и задаем z-index */
+  position: fixed;
 
-    /*  Побочные стили   */
-    top: 10px;
-    right: 5px;
-    border: none;
-    color: var(--primary-text-color);
-    cursor: pointer;
-    background-color: transparent;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*  Побочные стили   */
+  top: 10px;
+  right: 5px;
+  border: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    // &__icon {
-    //     transform: scale(1);
-    // }
+  // &__icon {
+  //     transform: scale(1);
+  // }
 
-    &:hover,
-    &:focus {
-        transform: scale(1.2);
-        fill: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    fill: var(--accent-color);
+  }
 }
 
 .read-more-title {
-    font-family: 'Seymour One';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--primary-text-color);
-    text-align: center;
-    margin-bottom: 20px;
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .read-more-video {
-    width: 224px;
-    height: 199px;
-    margin-bottom: 20px;
+  width: 224px;
+  height: 199px;
+  margin-bottom: 20px;
 }
 
 .read-more-text {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--primary-text-color);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--primary-text-color);
 }
 
 @media screen and (max-width: 479px) {
-    .read-more-modal {
-        max-width: 280px;
-    }
+  .read-more-modal {
+    max-width: 280px;
+  }
 }
 
 @media screen and (min-width: 480px) {
-    .read-more-modal {
-        max-width: 280px;
-    }
+  .read-more-modal {
+    max-width: 280px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .read-more-modal {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        height: 458px;
-        min-width: 568px;
-        padding: 32px 60px;
-        transform: translate(-50%, -50%) scale(1);
-    }
+  .read-more-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 458px;
+    min-width: 568px;
+    padding: 32px 60px;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-    .read-more-button {
-        top: 20px;
-        right: 20px;
-    }
+  .read-more-button {
+    top: 20px;
+    right: 20px;
+  }
 
-    .read-more-title {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28px;
-        margin-bottom: 32px;
-    }
+  .read-more-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
 
-    .read-more-video {
-        width: 448px;
-        height: 205px;
-        margin-bottom: 32px;
-    }
+  .read-more-video {
+    width: 448px;
+    height: 205px;
+    margin-bottom: 32px;
+  }
 
-    .read-more-text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-    }
+  .read-more-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
-
-
 
 // < -- Chololate Ingredients - #3 ---------------------->
 
 .modal-ingredients {
+  /*  Центрируем и задаем z-index */
+  // position: absolute;
+  // z-index: 25;
+  // top: 80%;
+  // // left: 50%;
+  // transform: translate(-50%, -50%);
 
-    /*  Центрируем и задаем z-index */
-    // position: absolute;
-    // z-index: 25;
-    // top: 80%;
-    // // left: 50%;
-    // transform: translate(-50%, -50%);
-
-    height: 100%;
-    // width: 100%;
-    // padding: 15px 10px;
-    border: 2px solid var(--accent-color);
-    background-color: var(--secondary-text-color);
-    transition: opacity 250ms linear, visibility 250ms linear;
-    border-radius: 10px;
+  height: 100%;
+  // width: 100%;
+  // padding: 15px 10px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--secondary-text-color);
+  transition: opacity 250ms linear, visibility 250ms linear;
+  border-radius: 10px;
 }
-
 
 .icecream {
   position: relative;
@@ -642,7 +621,7 @@ textarea {
       color: var(--accent-color);
     }
   }
-  
+
   &__close-icon {
     // width: 16px;
     // height: 16px;
@@ -650,8 +629,8 @@ textarea {
   }
   &__list {
     list-style: none;
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
     display: flex;
     gap: 9px;
     margin-bottom: 39px;
@@ -678,7 +657,7 @@ textarea {
   &__numbers {
     font-weight: 500;
     font-size: 10px;
-    line-height: 28px;    
+    line-height: 28px;
     color: var(--primary-text-color);
     position: absolute;
     top: -1px;
@@ -733,271 +712,270 @@ textarea {
     margin-bottom: 16px;
 
     &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--primary-text-color);
+    }
+  }
+  &__comment {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: var(--primary-text-color);
+    width: 100%;
+    height: 84px;
+    padding: 11px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid var(--primary-bg-color);
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--primary-text-color);
+      line-height: 20px;
     }
-  }
-  &__comment {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: var(--primary-text-color);
-        width: 100%;
-        height: 84px;
-        padding: 11px;
-        background: rgba(248, 210, 78, 0.1);
-        border: 1px solid var(--primary-bg-color);
-        border-radius: 10px;
-        margin-bottom: 30px;
-    
-        &::placeholder {
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--primary-text-color);
-        line-height: 20px;
-        }
   }
 
   &__btn {
-        margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .icecream {
-        max-width: 568px;
-        padding: 32px 20px;
+    max-width: 568px;
+    padding: 32px 20px;
     &__header::before {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -35%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -35%);
     }
     &__header::after {
-        margin-top: 31px;
+      margin-top: 31px;
     }
     &__close-btn {
-        top: 20px;
-        right: 20px;
-        width: 20px;
-        height: 20px;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
     }
     &__list {
-        gap: 20px;
-        justify-content: center;
+      gap: 20px;
+      justify-content: center;
     }
     &__item {
-        width: 65px;
-        height: 90px;
-        padding-bottom: 14px;
+      width: 65px;
+      height: 90px;
+      padding-bottom: 14px;
     }
     &__numbers {
-        width: 53px;
-        height: 53px;
-        left: 4px;
-        font-size: 12px;
+      width: 53px;
+      height: 53px;
+      left: 4px;
+      font-size: 12px;
     }
     &__descr {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
     }
     &__grid {
-        width: 100%;
+      width: 100%;
     }
     &__input {
-        width: 368px;
-        padding: 11px 16px;
+      width: 368px;
+      padding: 11px 16px;
     }
     &__comment {
-        width: 368px;
-        padding: 11px 16px;
+      width: 368px;
+      padding: 11px 16px;
     }
   }
 }
 
 .btn-fill {
-    font-family: Montserrat;
-    text-align: center;
-    max-width: 132px;
-    background-color: var(--accent-color);
-    color: var(--primary-text-color);
-    border: none;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 12px 34px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.25;
-    transition: background-color .25s linear;
-    display: block;
+  font-family: Montserrat;
+  text-align: center;
+  max-width: 132px;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 12px 34px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  transition: background-color 0.25s linear;
+  display: block;
 
-    &:hover, &:focus {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-color: #0a8817;
   }
 }
 @media screen and (min-width: 768px) {
-    .btn-fill {
-        max-width: 121px;
-        padding: 12px 34px;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.214;
-    }
+  .btn-fill {
+    max-width: 121px;
+    padding: 12px 34px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.214;
+  }
 }
-
-
 
 // < -- Our location modal - #4 --------------------->
 
 .modal-location {
-    /* Скрываем окна  */
-    // opacity: 0;
-    // visibility: hidden;
+  /* Скрываем окна  */
+  // opacity: 0;
+  // visibility: hidden;
 
-    /*  Центрируем и задаем z-index */
-    // position: fixed;
-    // z-index: 25; /* Должен быть выше чем у подложки*/
-    // top: 50%;
-    // left: 50%;
-    width: 100%;
-    /*  Побочные стили   */
-    background-color: var(--secondary-text-color);
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    // margin: 0 auto;
-    padding: 28px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 1px rgba(0,0,0,.14),0 2px 1px rgba(0,0,0,.2);
-    // transform: translate(0%)scale(1);
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: hidden;
-  }
+  /*  Центрируем и задаем z-index */
+  // position: fixed;
+  // z-index: 25; /* Должен быть выше чем у подложки*/
+  // top: 50%;
+  // left: 50%;
+  width: 100%;
+  /*  Побочные стили   */
+  background-color: var(--secondary-text-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  // margin: 0 auto;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+  // transform: translate(0%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: hidden;
+}
 
 @media screen and (max-width: 479px) {
-    .modal-location {
-        max-width: 280px;
-    }
+  .modal-location {
+    max-width: 280px;
+  }
 }
 @media screen and (min-width: 480px) {
-    .modal-location {
-        max-width: 280px;
-    }
+  .modal-location {
+    max-width: 280px;
+  }
 }
 @media screen and (min-width: 768px) {
-    .modal-location {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        height: 458px;
-        min-width: 568px;
-        padding: 32px 60px;
-        transform: translate(-50%, -50%) scale(1);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
-        // .backdrop.is-hidden & {
-        // transform: translate(-50%, -50%) scale(1.1);
-        // }
-    }
-
-    .modal-location-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    .modal-location-text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 32px;
-    }
-
-    iframe {
-        height: 205px;
-        margin-bottom: 32px;
-    }
-
-    .open-map-link {
-        max-width: 150px;
-        padding: 12px 34px;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 15px;
-    }
-}
-
-.modal-location-button {
-    position: absolute;
-    top: 12px;
-    right: 8px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  .modal-location {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 458px;
+    min-width: 568px;
+    padding: 32px 60px;
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    // &__icon {
-    //     transform: scale(1);
+    // .backdrop.is-hidden & {
+    // transform: translate(-50%, -50%) scale(1.1);
     // }
+  }
 
-    &:hover,
-    &:focus {
-        transform: scale(1.2);
-        fill: var(--accent-color);
-    }
-}
+  .modal-location-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 
-.modal-location-text {
-    font-family: 'Seymour One';
+  .modal-location-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--primary-text-color);
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+  }
+
+  iframe {
+    height: 205px;
+    margin-bottom: 32px;
+  }
+
+  .open-map-link {
+    max-width: 150px;
+    padding: 12px 34px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.modal-location-button {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // &__icon {
+  //     transform: scale(1);
+  // }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    fill: var(--accent-color);
+  }
+}
+
+.modal-location-text {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 iframe {
-    width: 100%;
-    height: 260px;
-    border-radius: 10px;
-    margin-bottom: 24px;
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  margin-bottom: 24px;
 }
 
 .open-map-link {
-    font-family: Montserrat;
-    text-align: center;
-    max-width: 150px;
-    background-color: var(--accent-color);
-    color: var(--primary-text-color);
-    border: none;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 12px 34px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.25;
-    transition: background-color .25s linear;
-    display: block;
+  font-family: Montserrat;
+  text-align: center;
+  max-width: 150px;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 12px 34px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  transition: background-color 0.25s linear;
+  display: block;
 
-    &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: #0a8817;
   }
 }
 
 @media screen and (min-width: 768px) {
-    .open-map-link {
-        max-width: 145px;
-        padding: 12px 34px;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.214;
-    }
+  .open-map-link {
+    max-width: 145px;
+    padding: 12px 34px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.214;
+  }
 }
-
 
 // /* Временные стили для кнопок для теста модалок */
 // .div--btn {
